@@ -12,7 +12,7 @@ app = FastAPI( Title="Plataformas de streaming",
 description=" Esta API permite investigar los datos de las plataformas de streaming Amazon, Disney Plus, Hulu y Netflix",
 version="1.0.0.0.1")
 
-content =  pd.read_csv('Datasets/content.csv')
+content =  pd.read_csv('./Datasets/content.csv')
 
 @app.get('/Maxima duracion segun tipo de film por plataforma y por anio/')
 async def get_max_duration(plat:str, year:int, dur:str):
